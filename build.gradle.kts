@@ -30,6 +30,14 @@ dependencies {
     implementation("com.justai.jaicf:core:$jaicf")
     implementation("com.justai.jaicf:jaicp:$jaicf")
     implementation("com.justai.jaicf:caila:$jaicf")
+    implementation("com.justai.jaicf:telegram:$jaicf")
+//    implementation(project(":channels:telegram"))
+
+    api("com.github.kotlin-telegram-bot:kotlin-telegram-bot:5.0.0") {
+        exclude("org.jetbrains.kotlin", "kotlin-stdlib")
+        exclude("com.github.kotlin-telegram-bot.kotlin-telegram-bot", "webhook")
+    }
+
 }
 
 tasks {
